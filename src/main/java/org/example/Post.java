@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "'Публикация'")
+
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +17,7 @@ public class Post {
 
     @OneToMany(mappedBy = "публикация", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<PostComment> comments = new ArrayList<>();
-
+//    private User user;
 
 
     public Long getId() {
@@ -42,4 +43,6 @@ public class Post {
     public void setComments(List<PostComment> comments) {
         this.comments = comments;
     }
+
+
 }

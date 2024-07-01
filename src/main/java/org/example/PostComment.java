@@ -15,8 +15,9 @@ public class PostComment {
     @ManyToOne
     @JoinColumn(name = "post_id", nullable = false)
     private Post post;
+//    private User user;
 
-    // Getters and setters
+
 
     public Long getId() {
         return id;
@@ -41,4 +42,6 @@ public class PostComment {
     public void setPost(Post post) {
         this.post = post;
     }
+
+
 }
